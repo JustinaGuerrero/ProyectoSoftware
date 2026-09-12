@@ -1,0 +1,10 @@
+Esta carpeta debe contener exactamente:
+- mardel.png
+- buzios.png
+- tulum.png
+- bariloche.png
+- ushuaia.png
+- salta.png
+
+Las fotografías reales verificadas y sus enlaces están detallados en ../README.txt.
+No se incluyeron ilustraciones ni imágenes genéricas como reemplazo.
