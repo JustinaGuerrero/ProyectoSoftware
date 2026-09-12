@@ -1,0 +1,521 @@
+/* =========================================================
+   Destinos Rosa — hoja de estilos
+   Paleta: rosa pastel, rosa viejo, rosa chicle y fucsia
+   ========================================================= */
+
+:root {
+  --crema: #fff8f5;
+  --rosa-pastel: #ffe1ee;
+  --rosa-pastel-suave: #fff0f6;
+  --rosa-chicle: #ff6fa5;
+  --rosa-viejo: #c98a9e;
+  --fucsia: #d6006d;
+  --fucsia-oscuro: #a40057;
+  --texto: #4a2e39;
+  --texto-suave: #7a5866;
+  --blanco: #ffffff;
+
+  --fuente-titulos: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+  --fuente-texto: "Trebuchet MS", Verdana, Geneva, sans-serif;
+
+  --radio-suave: 22px;
+  --radio-chico: 12px;
+  --sombra: 0 18px 40px -18px rgba(166, 45, 105, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  color: var(--texto);
+  background-color: var(--crema);
+  background-image:
+    radial-gradient(circle at 8% 12%, var(--rosa-pastel-suave) 0%, transparent 45%),
+    radial-gradient(circle at 92% 0%, var(--rosa-pastel) 0%, transparent 40%);
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--fucsia);
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulos);
+  color: var(--fucsia-oscuro);
+  margin: 0 0 0.4em 0;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0 0 1em 0;
+  max-width: 62ch;
+}
+
+/* ---------- Barra de navegación ---------- */
+
+.barra-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 248, 245, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--rosa-pastel);
+}
+
+.marca {
+  font-family: var(--fuente-titulos);
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--fucsia);
+  letter-spacing: 0.3px;
+}
+
+.marca span {
+  color: var(--rosa-viejo);
+  font-style: normal;
+}
+
+.enlaces-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.enlaces-nav a {
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  color: var(--texto);
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.enlaces-nav a:hover,
+.enlaces-nav a.activo {
+  background: var(--rosa-chicle);
+  color: var(--blanco);
+}
+
+/* ---------- Hero (portada) ---------- */
+
+.hero {
+  position: relative;
+  padding: 5rem 2rem 8rem;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--rosa-pastel) 0%, var(--rosa-chicle) 75%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 90px;
+  background: var(--crema);
+  clip-path: polygon(0 60%, 8% 40%, 18% 65%, 30% 35%, 42% 60%, 55% 30%, 68% 62%, 80% 35%, 92% 58%, 100% 40%, 100% 100%, 0 100%);
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  color: var(--blanco);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  text-shadow: 0 6px 24px rgba(164, 0, 87, 0.35);
+}
+
+.hero p {
+  color: var(--blanco);
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.15rem;
+  opacity: 0.95;
+}
+
+.hero-etiqueta {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--blanco);
+  font-size: 0.85rem;
+}
+
+/* ---------- Botones ---------- */
+
+.boton {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  background: var(--fucsia);
+  color: var(--blanco);
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.boton:hover {
+  background: var(--blanco);
+  color: var(--fucsia);
+  border-color: var(--fucsia);
+  transform: translateY(-2px);
+}
+
+.boton-linea {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  border: 2px solid var(--fucsia);
+  color: var(--fucsia);
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.boton-linea:hover {
+  background: var(--fucsia);
+  color: var(--blanco);
+}
+
+.botonera-hero {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.8rem;
+}
+
+.botonera-hero .boton-linea {
+  border-color: var(--blanco);
+  color: var(--blanco);
+}
+
+.botonera-hero .boton-linea:hover {
+  background: var(--blanco);
+  color: var(--fucsia);
+}
+
+/* ---------- Secciones generales ---------- */
+
+.seccion {
+  padding: 3.5rem 2rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.seccion-encabezado {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.6rem;
+}
+
+.seccion-encabezado p {
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--texto-suave);
+}
+
+/* ---------- Categorías (portada) ---------- */
+
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+}
+
+.tarjeta-categoria {
+  position: relative;
+  border-radius: var(--radio-suave);
+  padding: 2.4rem 1.8rem;
+  color: var(--blanco);
+  text-align: center;
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+
+.tarjeta-categoria.playa {
+  background: linear-gradient(150deg, #ff9dc4, var(--fucsia));
+}
+
+.tarjeta-categoria.montana {
+  background: linear-gradient(150deg, var(--rosa-viejo), var(--fucsia-oscuro));
+}
+
+.tarjeta-categoria h3 {
+  color: var(--blanco);
+  font-size: 1.6rem;
+}
+
+.tarjeta-categoria p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Grilla de destinos ---------- */
+
+.grilla-destinos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tarjeta-destino {
+  background: var(--blanco);
+  border-radius: var(--radio-suave);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--rosa-pastel);
+}
+
+.tarjeta-destino figure {
+  margin: 0;
+  position: relative;
+}
+
+.tarjeta-destino img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.tarjeta-destino figcaption {
+  position: absolute;
+  bottom: 0.7rem;
+  left: 0.7rem;
+  background: rgba(74, 46, 57, 0.75);
+  color: var(--blanco);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}
+
+.tarjeta-destino-cuerpo {
+  padding: 1.5rem 1.6rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tarjeta-destino h3 {
+  font-size: 1.35rem;
+}
+
+.tarjeta-destino .pais {
+  color: var(--rosa-viejo);
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.tarjeta-destino p {
+  color: var(--texto-suave);
+  font-size: 0.98rem;
+}
+
+.tarjeta-destino .acciones {
+  margin-top: auto;
+  padding-top: 0.8rem;
+}
+
+/* ---------- Formulario de contacto ---------- */
+
+.tarjeta-formulario {
+  background: var(--blanco);
+  border-radius: var(--radio-suave);
+  padding: 2.4rem;
+  box-shadow: var(--sombra);
+  max-width: 620px;
+  margin: 0 auto;
+  border: 1px solid var(--rosa-pastel);
+}
+
+.campo {
+  margin-bottom: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+.campo label {
+  font-weight: bold;
+  color: var(--fucsia-oscuro);
+  font-size: 0.95rem;
+}
+
+.campo input,
+.campo textarea,
+.campo select {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radio-chico);
+  border: 1.5px solid var(--rosa-pastel);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  background: var(--rosa-pastel-suave);
+  color: var(--texto);
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+  outline: 2px solid var(--rosa-chicle);
+  outline-offset: 2px;
+  background: var(--blanco);
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.nota-formulario {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+/* ---------- Página "Quiénes somos" ---------- */
+
+.tarjeta-perfil {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background: var(--blanco);
+  border-radius: var(--radio-suave);
+  padding: 2.4rem;
+  box-shadow: var(--sombra);
+  border: 1px solid var(--rosa-pastel);
+}
+
+.iniciales-perfil {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(150deg, var(--rosa-chicle), var(--fucsia));
+  color: var(--blanco);
+  font-family: var(--fuente-titulos);
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--sombra);
+}
+
+.lista-datos {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.lista-datos li {
+  padding-left: 1.4rem;
+  position: relative;
+  color: var(--texto-suave);
+}
+
+.lista-datos li::before {
+  content: "♥";
+  position: absolute;
+  left: 0;
+  color: var(--rosa-chicle);
+}
+
+/* ---------- Pie de página ---------- */
+
+.pie {
+  text-align: center;
+  padding: 2.4rem 1.5rem;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--rosa-pastel);
+  background: var(--rosa-pastel-suave);
+}
+
+.pie .marca {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 780px) {
+  .barra-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.4rem;
+  }
+
+  .enlaces-nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .categorias {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-perfil {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 3.5rem 1.4rem 6rem;
+  }
+
+  .seccion {
+    padding: 2.6rem 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .marca {
+    font-size: 1.35rem;
+  }
+
+  .enlaces-nav a {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  .tarjeta-formulario,
+  .tarjeta-perfil {
+    padding: 1.6rem;
+  }
+}

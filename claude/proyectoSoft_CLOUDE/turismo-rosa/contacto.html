@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos Rosa · Contacto</title>
+  <link rel="stylesheet" href="estilosA.css">
+</head>
+<body>
+
+  <header class="barra-nav">
+    <div class="marca">Destinos <span>Rosa</span></div>
+    <nav>
+      <ul class="enlaces-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="playa.html">Destinos de playa</a></li>
+        <li><a href="montana.html">Destinos de montaña</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="seccion-encabezado">
+        <h2>Conversemos</h2>
+        <p>¿Tenés dudas sobre algún destino o querés sugerir un lugar para sumar a la guía? Escribinos.</p>
+      </div>
+
+      <div class="tarjeta-formulario">
+        <form>
+          <div class="campo">
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamás?">
+          </div>
+
+          <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="tu@email.com">
+          </div>
+
+          <div class="campo">
+            <label for="destino">Destino de interés</label>
+            <select id="destino" name="destino">
+              <option value="">Elegí una opción</option>
+              <option value="mardel">Mar del Plata</option>
+              <option value="buzios">Búzios</option>
+              <option value="tulum">Tulum</option>
+              <option value="bariloche">Bariloche</option>
+              <option value="ushuaia">Ushuaia</option>
+              <option value="salta">Salta</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Contanos qué estás buscando..."></textarea>
+          </div>
+
+          <button type="submit" class="boton">Enviar mensaje</button>
+          <p class="nota-formulario">Este formulario es una vista estática de ejemplo y todavía no envía los datos a ningún servidor.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <span class="marca">Destinos Rosa</span>
+    Guía de viajes hecha con cariño · <a href="quienes-somos.html">Quiénes somos</a> · <a href="index.html">Inicio</a>
+  </footer>
+
+</body>
+</html>
